@@ -24,12 +24,12 @@ const TodoScreen = (): React.JSX.Element => {
   renderItem={({ item }) => (
        <View style={style.FlatListItemContainer}>
         <CheckBox style={style.CheckBoxStyle} value={item.completed} animationDuration={0.1} onValueChange={() => dispatcher(Toggle_Item(item.id))}></CheckBox>
-         <Text style={style.TaskText} onPress={() => navigation.navigate(RouteConstants.addOrUpdateTasks, {id: item.id , text: item.text, completed: item.completed})}>{item.text}</Text>
+         <Text style={style.TaskText} onPress={() => navigation.navigate('AddOrUpdateTask', {id: item.id , text: item.text, completed: item.completed})}>{item.text}</Text>
        </View> 
        )} />
        <FloatingAction
                 position="right"
-                onPressMain={() => navigation.navigate(RouteConstants.addOrUpdateTasks)}
+                onPressMain={() => navigation.navigate("AddOrUpdateTask")}
                 showBackground={false}
                 floatingIcon={require('../../assets/images/plus.png')}
             />

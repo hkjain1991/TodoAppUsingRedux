@@ -21,7 +21,8 @@ const AddOrUpdateTasks = (): React.JSX.Element => {
     const dispatcher = useDispatch<Dispatcher>()
     const [task, setTask] = useState(route?.params?.text ? route.params.text : "")
     const [completed, setCompleted] = useState(route?.params?.completed ? route.params.completed : false)
-    navigation.setOptions({title: route?.params?.id?"Update Task" : "Add Task"})
+    // TODO: Uncomment with talk expert react native guy
+    //navigation.setOptions({title: route?.params?.id?"Update Task" : "Add Task"})
 return <SafeAreaView style={style.container}>
    <StatusBar></StatusBar>
     <View>
